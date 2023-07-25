@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <script defer src="scripts.js"></script>
+  </head>
+  <body>
+    <header class="flex row container header desktop">
+      <button class="btn mobile-nav--btn">
+        <img class="openMenu" src="images/icon-menu.svg" />
+      </button>
+
+      <nav class="mobile-nav">
+        <button class="close-btn btn mobile-nav--btn">
+          <img class="closeMenu" src="images/icon-close.svg" />
+        </button>
+        <ul class="mobile-nav--list flex column">
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <img class="logo" src="images/logo.svg" alt="site logo" />
+      <nav class="desktop-nav">
+        <ul class="flex row">
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <div class="flex row user-inter">
+        <div style="position: relative">
+          <span class="cart-num hidden">0</span>
+          <img
+            class="btn cart-btn"
+            src="images/icon-cart.svg"
+            alt="cart button"
+          />
+        </div>
+        <img
+          class="profile-pfp"
+          src="images/image-avatar.png"
+          alt="profile picture"
+        />
+        <div class="hidden cart">
+          <p class="cart-name">Cart</p>
+          <div class="cart-content flex column">
+            <p class="empty-cart" style="text-align: center; padding: 8rem">
+              Your cart is empty
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main container grid grid--2cols">
+      <div class="product-images flex column">
+        <img
+          class="crop product-img"
+          src="images/image-product-1.jpg"
+          alt="photo of the product"
+        />
+        <div class="images-slider">
+          <div
+            class="img-box img-box1 current-box"
+            data-img="images/image-product-1.jpg"
+          >
+            <img class="slider-img" src="images/image-product-1.jpg" />
+          </div>
+          <div class="img-box img-box2" data-img="images/image-product-2.jpg">
+            <img class="slider-img" src="images/image-product-2.jpg" />
+          </div>
+          <div class="img-box img-box3" data-img="images/image-product-3.jpg">
+            <img class="slider-img" src="images/image-product-3.jpg" />
+          </div>
+          <div class="img-box img-box4" data-img="images/image-product-4.jpg">
+            <img class="slider-img" src="images/image-product-4.jpg" />
+          </div>
+        </div>
+
+        <button class="btn slider-btn slider-btn--left slider-btn--mobile">
+          <img src="images/icon-previous.svg" />
+        </button>
+
+        <button class="btn slider-btn slider-btn--right slider-btn--mobile">
+          <img src="images/icon-next.svg" />
+        </button>
+      </div>
+
+      <div class="product-info">
+        <p class="product-titlesm">SNEAKER COMPANY</p>
+        <h1 class="product-titlebg">Fall Limited Edition Sneakers</h1>
+        <p class="product-description">
+          These low-profile sneaker are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price">
+          <p class="current-price flex row">
+            $<span class="price-number">125.00</span>
+          </p>
+          <p class="previous-price">$250.00</p>
+        </div>
+
+        <div class="add-product flex row">
+          <div class="add-number">
+            <img
+              class="icon change-num minus-icon"
+              src="images/icon-minus.svg"
+            /><span class="items-num">0</span
+            ><img
+              class="icon change-num plus-icon"
+              src="images/icon-plus.svg"
+            />
+          </div>
+          <button class="btn btn--add-to-cart">
+            <img class="icon" src="images/icon-cart.svg" />
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div class="hidden light-box product-images">
+      <button class="btn btn--close-light-box">
+        <img class="icon" src="images/icon-close.svg" />
+      </button>
+      <div class="light-box-inner" style="position: relative">
+        <img
+          class="crop product-img"
+          src="images/image-product-1.jpg"
+          alt="photo of the product"
+        />
+        <button class="btn slider-btn slider-btn--left">
+          <img src="images/icon-previous.svg" />
+        </button>
+
+        <button class="btn slider-btn slider-btn--right">
+          <img src="images/icon-next.svg" />
+        </button>
+      </div>
+
+      <div class="flex row images-slider">
+        <div
+          class="img-box img-box1 current-box"
+          data-img="images/image-product-1.jpg"
+        >
+          <img class="slider-img" src="images/image-product-1.jpg" />
+        </div>
+        <div class="img-box img-box2" data-img="images/image-product-2.jpg">
+          <img class="slider-img" src="images/image-product-2.jpg" />
+        </div>
+        <div class="img-box img-box3" data-img="images/image-product-3.jpg">
+          <img class="slider-img" src="images/image-product-3.jpg" />
+        </div>
+        <div class="img-box img-box4" data-img="images/image-product-4.jpg">
+          <img class="slider-img" src="images/image-product-4.jpg" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
